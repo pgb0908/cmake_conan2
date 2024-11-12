@@ -1,6 +1,6 @@
 
 include(cmake/conan_version.cmake)
-include(cmake/conan_profile.cmake)
+include(cmake/conan_profile_detect.cmake)
 include(cmake/conan_host_profile.cmake)
 include(cmake/conan_install.cmake)
 
@@ -133,8 +133,8 @@ cmake_language(
 
 
 message(STATUS "TEST")
-set(CONAN_HOST_PROFILE "default;auto-cmake" CACHE STRING "Conan host profile")
-set(CONAN_BUILD_PROFILE "default" CACHE STRING "Conan build profile")
+set(CONAN_HOST_PROFILE "profile;auto-cmake" CACHE STRING "Conan host profile")
+set(CONAN_BUILD_PROFILE "profile" CACHE STRING "Conan build profile")
 set(CONAN_INSTALL_ARGS "--build=missing" CACHE STRING "Command line arguments for conan install")
 
 cmake_policy(POP)
