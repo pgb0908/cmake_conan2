@@ -9,6 +9,8 @@ class ConanApplication(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
     generators = "CMakeDeps"
 
+    tool_requires = "protobuf/3.17.1"
+
     def layout(self):
         cmake_layout(self)
 
@@ -19,3 +21,5 @@ class ConanApplication(ConanFile):
 
     def requirements(self):
         self.requires("fmt/11.0.2")
+        self.requires("grpc/1.48.4")
+        #self.requires("protobuf/3.17.1", override=True)
