@@ -1,6 +1,6 @@
 
 
-include(${CMAKE_BINARY_DIR}/conan/build/Debug/generators/conan_toolchain.cmake)
+include(${CMAKE_BINARY_DIR}/conan/build/Release/generators/conan_toolchain.cmake)
 find_package(Protobuf REQUIRED)
 find_program(PROTOC_EXECUTABLE protoc PATHS ${CMAKE_PROGRAM_PATH}
         NO_DEFAULT_PATH

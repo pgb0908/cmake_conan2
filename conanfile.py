@@ -22,4 +22,4 @@ class ConanApplication(ConanFile):
     def requirements(self):
         self.requires("fmt/11.0.2")
         self.requires("grpc/1.48.4")
-        #self.requires("protobuf/3.17.1", override=True)
+        self.requires("protobuf/3.17.1", override=True)
